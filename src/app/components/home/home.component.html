@@ -1,0 +1,60 @@
+<section class="main-section" >
+    <article class="row-parent-article-main">
+
+    
+        <article class="home-plant-img">
+            <div class="text-home">
+                <p class="main-p-home">LET YOUR EFFICIENCY GROW LIKE A PLANT.</p>
+            </div>
+            <button (click)="switchForm()">Start Now</button>
+        </article>
+        <article class="register-user-form" *ngIf="boolRegister" [@inOutAnimation]>
+            <h1>Register</h1>
+            <label for="Username">Username:</label>
+            <input type="text" placeholder="Username" required [(ngModel)]="username">
+            <label for="Password">Password:</label>
+            <input type="password" placeholder="Password" required [(ngModel)]="password">
+            <label for="Email">Email:</label>
+            <input type="email" placeholder="Email" required [(ngModel)]="email">
+            <button (click)="RegisterUser()">Register</button>
+            <p class="switch-form-p" (click)="switchForm()">Already have an account? click here to login.</p>  
+        </article>
+        <article class="login-user-form" *ngIf="boolLogin" [@inOutAnimation]>
+            <h1>Login</h1>
+            <label for="Username">Username:</label>
+            <input type="text" placeholder="Username" required [(ngModel)]="username">
+            <label for="Password">Password:</label>
+            <input type="password" placeholder="Password" required [(ngModel)]="password">
+            <button (click)="RegisterUser()">Login</button>
+            <p class="switch-form-p" (click)="switchForm()">Don't have an account yet? click here to register</p>
+        </article>
+    </article>
+</section>
+<section class="info-section">
+    <h1>Keep it simple, organize your day</h1>
+    <article class="row-parent-article-info">
+        <article class="info-article-text">
+            <p>With <strong>Ticked!</strong> you can keep your day organized in a very simple way. Just add a new task to do and it will be automatically added to your day agenda. You can also schedule tasks and events in different days. The best part it's that everything is totally free!</p>
+            <p>What are you waiting to <span routerLink="/">join us?</span></p>
+        </article>
+        <article class="info-article-mockup" >
+            <img src="../../../assets/svg/illustration-webapp-02.svg" width="100%" height="100%">
+        </article>
+
+    </article>
+</section>
+<section class="contact-section">
+    <h1>Contact us</h1>
+    <article>
+        <p>If you have any questions or suggestions, please contact via github.</p>
+        <p>If you find any bugs or problems while using the app, please report them at the github page that you can find here: </p>
+        <button class="ghub-button" onclick="window.location.href='https://github.com/Aaronby13'">GitHub <span><svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g data-name="Layer 2"><rect width="24" height="24" transform="rotate(180 12 12)" opacity="0"/><path fill="#22B573" d="M12 1A10.89 10.89 0 0 0 1 11.77 10.79 10.79 0 0 0 8.52 22c.55.1.75-.23.75-.52v-1.83c-3.06.65-3.71-1.44-3.71-1.44a2.86 2.86 0 0 0-1.22-1.58c-1-.66.08-.65.08-.65a2.31 2.31 0 0 1 1.68 1.11 2.37 2.37 0 0 0 3.2.89 2.33 2.33 0 0 1 .7-1.44c-2.44-.27-5-1.19-5-5.32a4.15 4.15 0 0 1 1.11-2.91 3.78 3.78 0 0 1 .11-2.84s.93-.29 3 1.1a10.68 10.68 0 0 1 5.5 0c2.1-1.39 3-1.1 3-1.1a3.78 3.78 0 0 1 .11 2.84A4.15 4.15 0 0 1 19 11.2c0 4.14-2.58 5.05-5 5.32a2.5 2.5 0 0 1 .75 2v2.95c0 .35.2.63.75.52A10.8 10.8 0 0 0 23 11.77 10.89 10.89 0 0 0 12 1" data-name="github"/></g></svg></span></button>
+
+        <p>Please remember that this page is just a mock-up that i've made to learn how to use Angular.js and maybe it won't work as efficiently as it should be</p>
+    </article>
+</section>
+<footer>
+    <p>&copy; Ticked! by <a href="https://github.com/Aaronby13">Aaronby13 on github.</a></p>
+    <p>Project made using <a href="https://angular.io/">AngularJS</a></p>
+</footer>
+
